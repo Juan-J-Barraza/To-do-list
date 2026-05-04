@@ -4,13 +4,13 @@ import com.java.todolist.dtos.tasks.TaskCreatedDto;
 import com.java.todolist.dtos.tasks.TaskResponseDto;
 import com.java.todolist.dtos.tasks.TaskUpdatedDto;
 import com.java.todolist.models.Task;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
-public class Mapper {
 
-    public Mapper() {
-    }
+@Component
+public class Mapper {
 
     public TaskResponseDto mapperTaskEntityToTaskResponse(Task task) {
         return new TaskResponseDto(task.getId(),

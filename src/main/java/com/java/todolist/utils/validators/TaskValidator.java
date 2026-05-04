@@ -5,9 +5,11 @@ import com.java.todolist.dtos.tasks.TaskUpdatedDto;
 import com.java.todolist.enums.TaskStatus;
 import com.java.todolist.utils.exeptions.BusinessException;
 import io.micrometer.common.util.StringUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
+@Component
 public class TaskValidator {
     private TaskStatus status;
     private final int MIN_CHARACTERS = 5;
